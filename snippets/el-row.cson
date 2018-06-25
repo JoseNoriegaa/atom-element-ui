@@ -1,0 +1,49 @@
+'.text.html.vue':
+  'element ui row':
+    'prefix': 'elrow'
+    'body': """
+    <el-row>
+      $1
+    </el-row>
+    """
+  'element ui row flex':
+    'prefix': 'elrowflex'
+    'body': """
+    <el-row
+      type="flex"
+      align="$1"
+      justify="$2"
+    >
+      $3
+    </el-row>
+    """
+  'element ui row with columns':
+    'prefix': 'elrowc2'
+    'body': """
+    <el-row>
+      <el-col :span="12">
+        $1
+      </el-col>
+      <el-col :span="12">
+        $2
+      </el-col>
+    </el-row>
+    """
+  'element ui row gutter':
+    'prefix': 'elrowg'
+    'body': """
+    <el-row :gutter="$1">
+      $2
+    </el-row>
+    """
+  'element ui row full properties':
+    'prefix': 'elrowfull'
+    'body': """
+    <el-row
+      :gutter="$1"
+      type="$2"
+      tag="$3"
+    >
+      $4
+    </el-row>
+    """

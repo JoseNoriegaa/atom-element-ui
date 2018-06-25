@@ -1,0 +1,15 @@
+'.text.html.vue':
+  'element ui carousel':
+    'prefix': 'elcarousel'
+    'body': """
+    <el-carousel height="${1:150px}">
+      $2
+    </el-carousel>
+    """
+  'element ui carousel item':
+    'prefix': 'elcarouselitm'
+    'body': """
+    <el-carousel-item>
+      $1
+    </el-carousel-item>
+    """

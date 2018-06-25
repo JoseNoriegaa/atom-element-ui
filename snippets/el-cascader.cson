@@ -1,0 +1,11 @@
+'.text.html.vue':
+  'element ui cascader':
+    'prefix': 'elcascader'
+    'body': """
+    <el-cascader
+      :options="$1"
+      v-model="$2"
+      @change="$3"
+      placeholder="$4"
+    />
+    """

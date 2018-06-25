@@ -1,0 +1,9 @@
+'.text.html.vue':
+  'element ui progress':
+    'prefix': 'elprogress'
+    'body': """
+    <el-progress
+     type="${1:line}"
+     :percentage="$2"
+     :status="$3"
+    />"""

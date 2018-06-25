@@ -1,0 +1,15 @@
+'.text.html.vue':
+  'element ui slider':
+    'prefix': 'elslider'
+    'body': """
+    <el-slider v-model="$1"/>
+    """
+  'element ui slider vertical':
+    'prefix': 'elsliderv'
+    'body': """
+    <el-slider
+      vertical
+      v-model="$1"
+      height="$2"
+    />
+    """

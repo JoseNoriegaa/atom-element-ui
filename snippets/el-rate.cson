@@ -1,0 +1,6 @@
+'.text.html.vue':
+  'element ui rate':
+    'prefix': 'elrate'
+    'body': """
+    <el-rate v-model="$1"/>
+    """

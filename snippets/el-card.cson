@@ -1,0 +1,8 @@
+'.text.html.vue':
+  'element ui card':
+    'prefix': 'elcard'
+    'body': """
+    <el-card class="$1">
+      $2
+    </el-card>
+    """

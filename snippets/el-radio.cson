@@ -1,0 +1,27 @@
+'.text.html.vue':
+  'element ui radio button':
+    'prefix': 'elradio'
+    'body': """
+    <el-radio
+      v-model="$1"
+      label="$2"
+    >
+      $3
+    </el-radio>
+    """
+  'element ui 2 radio button':
+    'prefix': 'elradio2'
+    'body': """
+    <el-radio
+      v-model="$1"
+      label="$2"
+    >
+      ${3: option A}
+    </el-radio>\n
+    <el-radio
+      v-model="$1"
+      label="$4"
+    >
+      ${5: option B}
+    </el-radio>
+    """

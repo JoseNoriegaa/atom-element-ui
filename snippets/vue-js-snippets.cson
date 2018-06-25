@@ -1,0 +1,30 @@
+'.source.js.embedded.html':
+  'element ui notification':
+    'prefix': 'elnoti'
+    'body': """
+    this.$notify({
+      title: '$1',
+      message: '$2',
+      type: '$3',
+      timeout: $4,
+    });
+    """
+  'element ui message':
+    'prefix': 'elmessage'
+    'body': """
+    this.$message({
+      type: '$1',
+      message: '$2',
+      showClose: ${3:false},
+    });
+    """
+  'element ui loading':
+    'prefix': 'elloading'
+    'body': """
+    this.$loading({
+      lock: ${1:true},
+      text: '${2:loading...}',
+      spinner: '${3:el-icon-loading}',
+      background: '${4:rgba(0, 0, 0, 0.7)}',
+    });
+    """

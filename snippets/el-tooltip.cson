@@ -1,0 +1,12 @@
+'.text.html.vue':
+  'element ui tootip':
+    'prefix': 'eltooltip'
+    'body': """
+    <el-tooltip
+      effect="${1:light}"
+      content="$2"
+      placement="${3:top-start}"
+    >
+      $4
+    </el-tooltip>
+    """

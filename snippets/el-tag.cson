@@ -1,0 +1,12 @@
+'.text.html.vue':
+  'element ui tag':
+    'prefix': 'eltag'
+    'body': """
+    <el-tag
+      closable
+      @click="${1:handleClose()}"
+      type="$2"
+    >
+      ${3:tag text}
+    </el-tag>
+    """

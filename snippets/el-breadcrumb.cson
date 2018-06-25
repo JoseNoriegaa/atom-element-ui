@@ -1,0 +1,18 @@
+'.text.html.vue':
+  'element ui breadcrumb':
+    'prefix': 'elbreadcrumb'
+    'body': """
+    <el-breadcrumb separator="${1:/}">
+      $2
+    </el-breadcrumb>
+    """
+
+  'element ui breadcrumb item':
+    'prefix': 'elbreadcrumbitm'
+    'body': """
+    <el-breadcrumb-item
+      :to="{ path: '$1' }"
+    >
+      $2
+    </el-breadcrumb-item>
+    """

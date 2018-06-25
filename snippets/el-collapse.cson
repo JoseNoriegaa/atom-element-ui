@@ -1,0 +1,22 @@
+'.text.html.vue':
+  'element ui collapse':
+    'prefix': 'elcollapse'
+    'body': """
+    <el-collapse
+      v-model="$1"
+      @change="${2:handleChange}"
+    >
+      $3
+    </el-collapse>
+    """
+
+  'element ui collapse item':
+    'prefix': 'elcollapseitm'
+    'body': """
+    <el-collapse-item
+      title="$1"
+      name="$2"
+    >
+      $3
+    </el-collapse-item>
+    """

@@ -1,0 +1,8 @@
+'.text.html.vue':
+  'element ui badge':
+    'prefix': 'elbadge'
+    'body': """
+    <el-badge :value="$1">
+      $2
+    </el-badge>
+    """

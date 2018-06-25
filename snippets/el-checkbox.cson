@@ -1,0 +1,8 @@
+'.text.html.vue':
+  'element ui checkbox':
+    'prefix': 'elcheck'
+    'body': """
+    <el-checkbox v-model="$1">
+      $2
+    </el-checkbox>
+    """

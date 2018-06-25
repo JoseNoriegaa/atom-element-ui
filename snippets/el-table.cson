@@ -1,0 +1,17 @@
+'.text.html.vue':
+  'element ui table':
+    'prefix': 'eltable'
+    'body': """
+    <el-table :data="${1:tableData}">
+      $2
+    </el-table>
+    """
+  'element ui table column':
+    'prefix': 'eltablecol'
+    'body': """
+    <el-table-column
+      prop="$1"
+      label="$2"
+      width="$3"
+    />
+    """
