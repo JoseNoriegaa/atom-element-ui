@@ -1,6 +1,0 @@
-'.text.html.vue':
-  'element ui color picker':
-    'prefix': 'elcolorpicker'
-    'body': """
-    <el-color-picker v-model="$1"/>
-    """
