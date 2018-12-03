@@ -877,3 +877,5 @@ For install this extension, there are a few steps.
     // Do something
   });
   ```
+# [License](https://github.com/JoseNoriegaa/atom-element-ui/blob/master/LICENSE)
+
