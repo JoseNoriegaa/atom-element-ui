@@ -10,10 +10,11 @@
     "vue2.js",
     "element-ui",
     "element",
-    "element",
     "ui",
     "atom",
-    "snippets"
+    "snippets",
+    "Vue html",
+    "Vue Component"
   ],
   "author": {
     "name": "Jose Noriega"
