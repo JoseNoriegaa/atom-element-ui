@@ -1,7 +1,7 @@
 {
   "name": "element-ui-snippets",
-  "version": "0.2.0",
-  "description": "element-ui snippets",
+  "version": "0.2.1",
+  "description": "vue element-ui snippets",
   "repository": "https://github.com/JoseNoriegaa/atom-element-ui",
   "keywords": [
     "vue",
@@ -17,14 +17,15 @@
     "Vue Component"
   ],
   "author": {
-    "name": "Jose Noriega"
+    "name": "Jose Noriega",
+    "email": "josenoriega723@gmail.com"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JoseNoriegaa/atom-element-ui/issues"
   },
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.0.0"
   },
   "dependencies": {}
 }

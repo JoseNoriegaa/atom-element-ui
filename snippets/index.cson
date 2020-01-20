@@ -1,6 +1,6 @@
 # Vue element-ui snippets
 # By Jose Noriega, https://github.com/JoseNoriegaa
-# Last Update: 12/03/2018
+# Last Update: 20/01/2020
 
 '.text.html.vue':
   # ---- Basic ----
@@ -25,17 +25,6 @@
       $6
     </el-col>
     """
-  'element ui column flex':
-    'prefix': 'elcolflex'
-    'body': """
-    <el-col
-      type="flex"
-      align="$1"
-      justify="$2"
-    >
-      $3
-    </el-col>
-    """
   'element ui column span':
     'prefix': 'elcolsp'
     'body': """
@@ -43,7 +32,7 @@
       $2
     </el-col>
     """
-  'element ui column full properties':
+  'element ui column - all properties':
     'prefix': 'elcolfull'
     'body': """
     <el-col
@@ -51,7 +40,7 @@
       :offset="$2"
       :push="$3"
       :pull="$4"
-      :xl="$5"
+      :xs="$5"
       :sm="$6"
       :md="$7"
       :lg="$8"
@@ -80,7 +69,7 @@
       $3
     </el-row>
     """
-  'element ui row with columns':
+  'element ui row with two columns inside':
     'prefix': 'elrowc2'
     'body': """
     <el-row>
@@ -99,7 +88,7 @@
       $2
     </el-row>
     """
-  'element ui row full properties':
+  'element ui row - all properties':
     'prefix': 'elrowfull'
     'body': """
     <el-row
@@ -144,6 +133,50 @@
       $3
     </el-button>
     """
+  'element ui button - all properties':
+    'prefix': 'elbtnfull'
+    'body': """
+    <el-button
+      size="${1:medium}"
+      type="${2:primary}"
+      :plain="${3:false}"
+      :round="${4:false}"
+      :circle="${5:false}"
+      :loading="${6:false}"
+      :disabled="${7:false}"
+      icon="$8"
+      :autofocus="${9:false}"
+      native-type="${10:button}"
+      @click.native="$11"
+    >
+      $12
+    </el-button>
+    """
+  # Link
+  'element ui link':
+    'prefix': 'ellink'
+    'body': """
+    <el-link
+      href="${1:url}"
+      target="${2:_self}"
+    >
+      $3
+    </el-link>
+    """
+  'element ui link - all properties':
+    'prefix': 'ellinkfull'
+    'body': """
+    <el-link
+      type="${1:primary}"
+      underline="${2:true}"
+      disabled="${3:false}"
+      href="${4:url}"
+      target="${5:_self}"
+      icon="$6"
+    >
+      $8
+    </el-link>
+    """
   # ---- Form ----
   # Radio
   'element ui radio button':
@@ -179,11 +212,12 @@
       v-model="$1"
       label="$2"
       :disabled="${3:false}"
-      size="${4:medium}"
-      name="$5"
-      @change="$6"
+      :border="${4:false}"
+      size="${5:medium}"
+      name="$6"
+      @change="$7"
     >
-      $7
+      $8
     </el-radio>
     """
   'element ui radio-group':
@@ -191,10 +225,23 @@
     'body': """
     <el-radio-group
       v-model="$1"
+      @change="$2"
+    >
+      $3
+    </el-radio-group>
+    """
+  'element ui radio-group - all properties':
+    'prefix': 'elradiogroupfull'
+    'body': """
+    <el-radio-group
+      v-model="$1"
       size="${2:medium}"
       :disabled="${3:false}"
+      text-color="${4:#FFFFFF}"
+      fill="${5:#409EFF}"
+      @change="$6"
     >
-      $4
+      $7
     </el-radio-group>
     """
   # Checkbox
@@ -203,6 +250,25 @@
     'body': """
     <el-checkbox v-model="$1">
       $2
+    </el-checkbox>
+    """
+  'element ui checkbox - all properties':
+    'prefix': 'elcheckfull'
+    'body': """
+    <el-checkbox
+      v-model="$1"
+      label="$2"
+      true-label="$3"
+      false-label="$4"
+      :disabled="${5:false}"
+      :border="${6:false}"
+      size="${7:medium}"
+      name="$8"
+      :checked="${9:false}"
+      :indeterminate="${10:false}"
+      @change="$11"
+    >
+      $12
     </el-checkbox>
     """
   'element ui checkbox-group':
@@ -220,34 +286,16 @@
     'body': """
     <el-checkbox-group
       v-model="$1"
-      size="${2:small}"
+      size="${2:medium}"
       :disabled="${3:false}"
       :min="$4"
       :max="$5"
-      text-color="${6:#ffffff}"
+      text-color="${6:#FFFFFF}"
       fill="${7:#409EFF}"
       @change="$8"
     >
       $9
     </el-checkbox-group>
-    """
-  'element ui checkbox - all properties':
-    'prefix': 'elcheckfull'
-    'body': """
-    <el-checkbox
-      v-model="$1"
-      :disabled="${2:false}"
-      true-label="$3"
-      false-label="$4"
-      :border="${5:false}"
-      size="${6:medium}"
-      name="$7"
-      :checked="${8:false}"
-      :indeterminate="${9:false}"
-      @change="$10"
-    >
-      $11
-    </el-checkbox>
     """
   'element ui checkbox button':
     'prefix': 'elcheckbtn'
@@ -258,6 +306,20 @@
       false-label="$3"
     >
       $4
+    </el-checkbox-button>
+    """
+  'element ui checkbox button - all properties':
+    'prefix': 'elcheckbtnfull'
+    'body': """
+    <el-checkbox-button
+      label="$1"
+      true-label="$2"
+      false-label="$3"
+      :disabled="${4:false}"
+      name="$5"
+      :checked="${6:false}"
+    >
+      $7
     </el-checkbox-button>
     """
   # Inputs
@@ -693,6 +755,25 @@
       $1
     </el-breadcrumb-item>
     """
+  # PageHeader
+  'element ui page header':
+    'prefix': 'elpageheader'
+    'body': """
+    <el-page-header @back="$1" content="$2">
+      $3
+    </el-page-header>
+    """
+  'element ui page header - all properties':
+    'prefix': 'elpageheaderfull'
+    'body': """
+    <el-page-header
+      title="${1:Back}"
+      content="$2"
+      @back="$3"
+    >
+      $4
+    </el-page-header>
+    """
   # Dropdown
   'element ui dropdown':
     'prefix': 'eldropdown'
@@ -785,6 +866,36 @@
       </el-button>
     </el-popover>
     """
+  # Popconfirm
+  'element ui popconfirm':
+    'prefix': 'elpopconfirm'
+    'body': """
+    <el-popconfirm
+      title="${1:Are you sure to delete this?}"
+    >
+      <el-button slot="reference">
+        Delete
+      </el-button>
+    </el-popconfirm>
+    """
+  'element ui popconfirm - all properties':
+    'prefix': 'elpopconfirmfull'
+    'body': """
+    <el-popconfirm
+      title="${1:Are you sure to delete this?}"
+      confirmButtonText="${2:YES}"
+      cancelButtonText="${3:NO}"
+      confirmButtonType="${4:primary}"
+      cancelButtonType="${5:text}"
+      icon="${6:el-icon-question}"
+      iconColor="${7:#FF9900}"
+      :hideIcon="${8:false}"
+    >
+      <el-button slot="reference">
+        Delete
+      </el-button>
+    </el-popconfirm>
+    """
   # Card
   'element ui card':
     'prefix': 'elcard'
@@ -832,7 +943,199 @@
       $3
     </el-collapse-item>
     """
-
+  # Timeline
+  'element ui timeline':
+    'prefix': 'eltimeline'
+    'body': """
+    <el-timeline :reverse="${1:false}">
+      $2
+    </el-timeline>
+    """
+  'element ui timeline item':
+    'prefix': 'eltimelineitem'
+    'body': """
+    <el-timeline-item
+      timestamp="${1:YYYY-MM-DD}"
+    >
+      $2
+    </el-timeline-item>
+    """
+  'element ui timeline item - all properties':
+    'prefix': 'eltimelinefull'
+    'body': """
+    <el-timeline-item
+      timestamp="${1:YYYY-MM-DD}"
+      :hide-timestamp="${2:false}"
+      placement="${3:bottom}"
+      type="${4:primary}"
+      color="$5"
+      size="${6:normal}"
+      icon="$7"
+    >
+      $8
+    </el-timeline-item>
+    """
+  # Divider
+  'element ui divider':
+    'prefix': 'eldivider'
+    'body': """
+    <el-divider>$1</el-divider>
+    """
+  'element ui divider - all properties':
+    'prefix': 'eldividerfull'
+    'body': """
+    <el-divider
+      direction="${1:horizontal}"
+      content-position="${2:center}"
+    >
+      $3
+    </el-divider>
+    """
+  # Calendar
+  'element ui calendar':
+    'prefix': 'elcalendar'
+    'body': """
+    <el-calendar v-model="$1" />
+    """
+  'element ui calendar - all properties':
+    'prefix': 'elcalendarfull'
+    'body': """
+    <el-calendar
+      v-model="$1"
+      :range="${2:[]}"
+      :first-day-of-week="${3:1}"
+    />
+    """
+  # Image
+  'element ui image':
+    'prefix': 'elimage'
+    'body': """
+    <el-image
+      src="$1"
+      fit="${2:contain}"
+    >
+      $2
+    </el-image>
+    """
+  'element ui image - all properties':
+    'prefix': 'elimagefull'
+    'body': """
+    <el-image
+      src="$1"
+      fit="${2:contain}"
+      alt="${3:image}"
+      referrer-policy="$4"
+      :lazy="${5:false}"
+      scroll-container="$6"
+      :preview-src-list="${7:[]}"
+      :z-index="${8:2000}"
+      @load="$9"
+      @error="$10"
+    >
+      $11
+    </el-image>
+    """
+  # Backtop
+  'element ui backtop':
+    'prefix': 'elbacktop'
+    'body': """
+    <el-backtop target="$1">
+      $2
+    </el-backtop>
+    """
+  'element ui backtop - full properties':
+    'prefix': 'elbacktopfull'
+    'body': """
+    <el-backtop
+      target="$1"
+      :visibility-height="${2:200}"
+      :right="${3:40}"
+      :bottom="${4:40}"
+      @click="$5"
+    >
+      $6
+    </el-backtop>
+    """
+  # Infinite scroll
+  'element ui infinite scroll':
+    'prefix': 'elinfinite'
+    'body': """
+    <ul
+      class="infinite-list"
+      v-infinite-scroll="$1"
+      style="overflow:auto"
+    >
+      <li v-for="item in $2" class="infinite-list-item">
+        $3
+      </li>
+    </ul>
+    """
+  # Avatar
+  'element ui avatar':
+    'prefix': 'elavatar'
+    'body': """
+    <el-avatar
+      shape="${1:circle}"
+      size="${2:medium}"
+      src="$3"
+    >
+      $4
+    </el-avatar>
+    """
+  'element ui avatar - all properties':
+    'prefix': 'elavatarfull'
+    'body': """
+    <el-avatar
+      icon="$1"
+      size="${2:medium}"
+      shape="${3:circle}"
+      src="$4"
+      srcSet="$5"
+      alt="$6"
+      fit="${7:cover}"
+      @error="${8:() => {}}"
+    >
+      $9
+    </el-avatar>
+    """
+  # Drawer
+  'element ui drawer':
+    'prefix': 'eldrawer'
+    'body': """
+    <el-drawer
+      title="$1"
+      :visible="${2:false}"
+      direction="${3:rtl}"
+    >
+      $4
+    </el-drawer>
+    """
+  'element ui drawer - all properties':
+    'prefix': 'eldrawerfull'
+    'body': """
+    <el-drawer
+      :append-to-body="${1:false}"
+      :before-close="$2"
+      :close-on-press-escape="$3"
+      custom-class="$4"
+      :destroy-on-close="${5:false}"
+      :modal="${6:true}"
+      :modal-append-to-body="${7:true}"
+      direction="${8:rtl}"
+      :show-close="${9:true}"
+      size="${10:30%}"
+      title="$11"
+      :visible="${12:false}"
+      :wrapperClosable="${13:true}"
+      :withHeader="${14:true}"
+      @open="${15:() => {}}"
+      @opened="${16:() => {}}"
+      @close="${17:() => {}}"
+      @closed="${18:() => {}}"
+    >
+      $19
+    </el-drawer>
+    """
 # Javascript Snippets
 '.source.js.embedded.html':
   'element ui notification':

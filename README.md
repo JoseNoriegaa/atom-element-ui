@@ -16,11 +16,84 @@ For install this extension, there are a few steps.
     ```
 2. Find the [element-ui-snippets](https://atom.io/packages/element-ui-snippets) extension and install it
 
+## Component list
+- Basics
+  - [`el-col`](#column)
+  - [`el-row`](#row)
+  - [`el-container`](#container)
+  - [`el-button`](#button)
+  - [`el-link`](#link)
+- Form
+  - [`el-radio`](#radio)
+  - [`el-radio-group`](#radio)
+  - [`el-checkbox`](#checkbox)
+  - [`el-checkbox-group`](#checkbox)
+  - [`el-checkbox-button`](#checkbox)
+  - [`el-input`](#inputs)
+  - [`el-input-number`](#inputs)
+  - [`el-select`](#select)
+  - [`el-option`](#select)
+  - [`el-cascader`](#cascader)
+  - [`el-switch`](#switch)
+  - [`el-slider`](#slider)
+  - [`el-time-picker`](#time-picker)
+  - [`el-time-select`](#time-picker)
+  - [`el-date-picker`](#date-time-picker)
+  - [`el-upload`](#upload)
+  - [`el-color-picker`](#color-picker)
+  - [`el-transfer`](#transfer)
+  - [`el-form`](#form)
+  - [`el-form-item`](#form)
+- Data
+  - [`el-table`](#table)
+  - [`el-table-column`](#table)
+  - [`el-tag`](#tag)
+  - [`el-tree`](#tree)
+  - [`el-pagination`](#pagination)
+  - [`el-badge`](#badge)
+- Notice
+  - [`el-alert`](#alert)
+  - [Loading](#javascript)
+  - [Message](#javascript)
+  - [MessageBox](#javascript)
+  - [Notification](#javascript)
+- Navigation
+  - [`el-menu`](#menu)
+  - [`el-menu-item`](#menu)
+  - [`el-submenu`](#menu)
+  - [`el-tabs`](#tabs)
+  - [`el-tab-pane`](#tabs)
+  - [`el-breadcrumb`](#breadcrumb)
+  - [`el-breadcrumb-item`](#breadcrumb)
+  - [`el-page-header`](#page-header)
+  - [`el-dropdown`](#dropdown)
+  - [`el-dropdown-menu`](#dropdown)
+  - [`el-steps`](#steps)
+  - [`el-step`](#steps)
+- Others
+  - [`el-dialog`](#dialog)
+  - [`el-tooltip`](#tooltip)
+  - [`el-popover`](#popover)
+  - [`el-popconfirm`](#popconfirm)
+  - [`el-card`](#card)
+  - [`el-carousel`](#carousel)
+  - [`el-collapse`](#collapse)
+  - [`el-collapse-item`](#collapse)
+  - [`el-timeline`](#timeline)
+  - [`el-timeline-item`](#timeline)
+  - [`el-divider`](#divider)
+  - [`el-calendar`](#calendar)
+  - [`el-image`](#image)
+  - [`el-backtop`](#backtop)
+  - [Infinite Scroll](#infinite-scroll)
+  - [`el-avatar`](#avatar)
+  - [`el-drawer`](#drawer)
+
 ## Snippets:
 
 ### Basic
 
-##### Column
+##### [Column](https://element.eleme.io/#/en-US/component/layout#col-attributes)
 - elcol
   ```html
   <el-col>
@@ -39,16 +112,6 @@ For install this extension, there are a few steps.
 
   </el-col>
   ```
-- elcolflex
-  ```html
-  <el-col
-    type="flex"
-    align=""
-    justify=""
-  >
-
-  </el-col>
-  ```
 - elcolsp
   ```html
   <el-col :span="">
@@ -62,7 +125,7 @@ For install this extension, there are a few steps.
     :offset=""
     :push=""
     :pull=""
-    :xl=""
+    :xs=""
     :sm=""
     :md=""
     :lg=""
@@ -72,7 +135,7 @@ For install this extension, there are a few steps.
 
   </el-col>
   ```
-##### Row
+##### [Row](https://element.eleme.io/#/en-US/component/layout#row-attributes)
 - elrow
   ```html
   <el-row>
@@ -118,7 +181,7 @@ For install this extension, there are a few steps.
 
   </el-row>
   ```
-##### Container
+##### [Container](https://element.eleme.io/#/en-US/component/container)
 - elcontainer
   ```html
   <el-container>
@@ -138,7 +201,7 @@ For install this extension, there are a few steps.
     </el-container>
   </el-container>
   ```
-##### Button
+##### [Button](https://element.eleme.io/#/en-US/component/button)
 - elbtn
   ```html
   <el-button
@@ -148,10 +211,50 @@ For install this extension, there are a few steps.
 
   </el-button>
   ```
+- elbtnfull
+  ```html
+  <el-button
+    size="medium"
+    type="primary"
+    :plain="false"
+    :round="false"
+    :circle="false"
+    :loading="false"
+    :disabled="false"
+    icon=""
+    :autofocus="false"
+    native-type="button"
+    @click.native=""
+  >
 
+  </el-button>
+  ```
+##### [Link](https://element.eleme.io/#/en-US/component/link)
+  - ellink
+  ```html
+  <el-link
+    href="url"
+    target="_self"
+  >
+
+  </el-link>
+  ```
+  - ellinkfull
+  ```html
+  <el-link
+    type="primary"
+    underline="true"
+    disabled="false"
+    href="url"
+    target="_self"
+    icon=""
+  >
+    
+  </el-link>
+  ```
 ### Form
 
-##### Radio
+##### [Radio](https://element.eleme.io/#/en-US/component/radio)
 - elradio
   ```html
   <el-radio
@@ -183,24 +286,37 @@ For install this extension, there are a few steps.
     v-model=""
     label=""
     :disabled="false"
+    :border="false"
     size="medium"
     name=""
     @change=""
   >
-
+    
   </el-radio>
   ```
 - elradiogroup
   ```html
   <el-radio-group
     v-model=""
-    size="medium"
-    :disabled="false"
+    @change=""
   >
-
+    
   </el-radio-group>
   ```
-##### Checkbox
+- elradiogroupfull
+  ```html
+  <el-radio-group
+    v-model=""
+    size="medium"
+    :disabled="false"
+    text-color="#FFFFFF"
+    fill="#409EFF"
+    @change=""
+  >
+    
+  </el-radio-group>
+  ````
+##### [Checkbox](https://element.eleme.io/#/en-US/component/checkbox)
 - elcheck
   ```html
   <el-checkbox v-model="">
@@ -220,9 +336,10 @@ For install this extension, there are a few steps.
   ```html
   <el-checkbox
     v-model=""
-    :disabled="false"
+    label=""
     true-label=""
     false-label=""
+    :disabled="false"
     :border="false"
     size="medium"
     name=""
@@ -230,22 +347,22 @@ For install this extension, there are a few steps.
     :indeterminate="false"
     @change=""
   >
-
+    
   </el-checkbox>
   ```
 - elcheckgrfull
   ```html
   <el-checkbox-group
     v-model=""
-    size="small"
+    size="medium"
     :disabled="false"
     :min=""
     :max=""
-    text-color="#ffffff"
+    text-color="#FFFFFF"
     fill="#409EFF"
     @change=""
   >
-
+    
   </el-checkbox-group>
   ```
 - elcheckbtn
@@ -255,10 +372,23 @@ For install this extension, there are a few steps.
     true-label=""
     false-label=""
   >
-
+    
   </el-checkbox-button>
   ```
-##### Inputs
+- elcheckbtnfull
+  ```html
+  <el-checkbox-button
+    label=""
+    true-label=""
+    false-label=""
+    :disabled="false"
+    name=""
+    :checked="false"
+  >
+    
+  </el-checkbox-button>
+  ```
+##### [Inputs](https://element.eleme.io/#/en-US/component/input)
 - elinput
   ```html
   <el-input
@@ -322,7 +452,7 @@ For install this extension, there are a few steps.
     :controls=" true"
   />
   ```
-##### Select
+##### [Select](https://element.eleme.io/#/en-US/component/select)
 - elselect
   ```html
   <el-select
@@ -347,7 +477,7 @@ For install this extension, there are a few steps.
   />
   </el-option>
   ```
-##### Cascader
+##### [Cascader](https://element.eleme.io/#/en-US/component/cascader)
 - elcascader
   ```html
   <el-cascader
@@ -358,7 +488,7 @@ For install this extension, there are a few steps.
     expand-trigger="click"
   />
   ```
-##### Switch
+##### [Switch](https://element.eleme.io/#/en-US/component/switch)
 - elswitch
   ```html
   <el-switch
@@ -369,7 +499,7 @@ For install this extension, there are a few steps.
     inactive-text=""
   />
   ```
-##### Slider
+##### [Slider](https://element.eleme.io/#/en-US/component/slider)
 - elslider
   ```html
   <el-slider
@@ -377,7 +507,7 @@ For install this extension, there are a few steps.
     vertical="false"
   />
   ```
-##### Time picker
+##### [Time picker](https://element.eleme.io/#/en-US/component/time-picker)
 - eltimepicker
   ```html
   <el-time-picker
@@ -400,7 +530,7 @@ For install this extension, there are a few steps.
     placeholder="Select time"
   />
   ```
-##### Date time picker
+##### [Date time picker](https://element.eleme.io/#/en-US/component/date-picker)
 - eldatepicker
   ```html
   <el-date-picker
@@ -409,7 +539,7 @@ For install this extension, there are a few steps.
     placeholder=""
   />
   ```
-##### Upload
+##### [Upload](https://element.eleme.io/#/en-US/component/upload)
 - elupload
   ```html
   <el-upload
@@ -449,17 +579,17 @@ For install this extension, there are a few steps.
     <img width="100%" :src="dialogImageUrl" alt="">
   </el-dialog>
   ```
-##### Rate
+##### [Rate](https://element.eleme.io/#/en-US/component/rate)
 - elrate
   ```html
   <el-rate v-model=""/>
   ```
-##### Color picker
+##### [Color picker](https://element.eleme.io/#/en-US/component/color-picker)
 - elcolorpicker
   ```html
   <el-color-picker v-model=""/>
   ```
-##### Transfer
+##### [Transfer](https://element.eleme.io/#/en-US/component/transfer)
 - eltrans
   ```html
   <el-transfer
@@ -468,7 +598,7 @@ For install this extension, there are a few steps.
     :data=""
   />
   ```
-##### Form
+##### [Form](https://element.eleme.io/#/en-US/component/form)
 - elform
   ```html
   <el-form
@@ -501,7 +631,7 @@ For install this extension, there are a few steps.
 
 ### Data
 
-##### Table
+##### [Table](https://element.eleme.io/#/en-US/component/table)
 - eltable
   ```html
   <el-table :data="tableData">
@@ -516,7 +646,7 @@ For install this extension, there are a few steps.
     width=""
   />
   ```
-##### Tag
+##### [Tag](https://element.eleme.io/#/en-US/component/tag)
 - eltag
   ```html
   <el-tag
@@ -527,7 +657,7 @@ For install this extension, there are a few steps.
     tag text
   </el-tag>
   ```
-##### Progress
+##### [Progress](https://element.eleme.io/#/en-US/component/progress)
 - elprogress
   ```html
   <el-progress
@@ -536,7 +666,7 @@ For install this extension, there are a few steps.
    :status=""
   />
   ```
-##### Tree
+##### [Tree](https://element.eleme.io/#/en-US/component/tree)
 - eltree
   ```html
   <el-tree
@@ -545,7 +675,7 @@ For install this extension, there are a few steps.
     @node-click=""
   />
   ```
-##### Pagination
+##### [Pagination](https://element.eleme.io/#/en-US/component/pagination)
 - elpagination
   ```html
   <el-pagination
@@ -558,7 +688,7 @@ For install this extension, there are a few steps.
     :total="totalNum" background>
   </el-pagination>
   ```
-##### Badge
+##### [Badge](https://element.eleme.io/#/en-US/component/badge)
 - elbadge
   ```html
   <el-badge
@@ -571,7 +701,7 @@ For install this extension, there are a few steps.
 
 ### Notice
 
-##### Alert
+##### [Alert](https://element.eleme.io/#/en-US/component/alert)
 - elalrt
   ```html
   <el-alert
@@ -584,7 +714,7 @@ For install this extension, there are a few steps.
 
 ### Navigation
 
-##### Menu
+##### [Menu](https://element.eleme.io/#/en-US/component/menu)
 - elmenu
   ```html
   <el-menu
@@ -625,7 +755,7 @@ For install this extension, there are a few steps.
 
   </el-menu>
   ```
-##### Tabs
+##### [Tabs](https://element.eleme.io/#/en-US/component/tabs)
 - eltabs
   ```html
   <el-tabs
@@ -644,7 +774,7 @@ For install this extension, there are a few steps.
 
   </el-tab-pane>
   ```
-##### Breadcrumb
+##### [Breadcrumb](https://element.eleme.io/#/en-US/component/breadcrumb)
 - elbreadcrumb
   ```html
   <el-breadcrumb separator="/">
@@ -661,7 +791,24 @@ For install this extension, there are a few steps.
 
   </el-breadcrumb-item>
   ```
-##### Dropdown
+##### [Page Header](https://element.eleme.io/#/en-US/component/page-header)
+- elpageheader
+  ```html
+  <el-page-header @back="" content="">
+    
+  </el-page-header>
+  ```
+- elpageheaderfull
+  ```html
+  <el-page-header
+    title="Back"
+    content=""
+    @back=""
+  >
+    
+  </el-page-header>
+  ```
+##### [Dropdown](https://element.eleme.io/#/en-US/component/dropdown)
 - eldropdown
   ```html
   <el-dropdown>
@@ -686,7 +833,7 @@ For install this extension, there are a few steps.
 
   </el-dropdown-item>
   ```
-##### Steps
+##### [Steps](https://element.eleme.io/#/en-US/component/steps)
 - elsteps
   ```html
   <el-steps :active="step" finish-status="success">
@@ -700,7 +847,7 @@ For install this extension, there are a few steps.
 
 ### Others
 
-##### Dialog
+##### [Dialog](https://element.eleme.io/#/en-US/component/dialog)
 - eldialog
   ```html
   <el-dialog
@@ -723,7 +870,7 @@ For install this extension, there are a few steps.
     </span>
   </el-dialog>
   ```
-##### Tooltip
+##### [Tooltip](https://element.eleme.io/#/en-US/component/tooltip)
 - eltooltip
   ```html
   <el-tooltip
@@ -734,7 +881,7 @@ For install this extension, there are a few steps.
 
   </el-tooltip>
   ```
-##### Popover
+##### [Popover](https://element.eleme.io/#/en-US/component/popover)
 - elpopover
   ```html
   <el-popover
@@ -749,7 +896,36 @@ For install this extension, there are a few steps.
     </el-button>
   </el-popover>
   ```
-##### Card
+##### [Popconfirm](https://element.eleme.io/#/en-US/component/popconfirm)
+- elpopconfirm
+  ```html
+  <el-popconfirm
+    title="Are you sure to delete this?"
+  >
+    <el-button slot="reference">
+      Delete
+    </el-button>
+  </el-popconfirm>
+  ```
+- elpopconfirmfull
+  ```html
+  <el-popconfirm
+    title="Are you sure to delete this?"
+    confirmButtonText="YES"
+    cancelButtonText="NO"
+    confirmButtonType="primary"
+    cancelButtonType="text"
+    icon="el-icon-question"
+    iconColor="#FF9900"
+    :hideIcon="false"
+  >
+    <el-button slot="reference">
+      Delete
+    </el-button>
+  </el-popconfirm>
+  ````
+
+##### [Card](https://element.eleme.io/#/en-US/component/card)
 - elcard
   ```html
   <el-card class="">
@@ -759,7 +935,7 @@ For install this extension, there are a few steps.
 
   </el-card>
   ```
-##### Carousel
+##### [Carousel](https://element.eleme.io/#/en-US/component/carousel)
 - elcarousel
   ```html
   <el-carousel height="150px">
@@ -772,7 +948,7 @@ For install this extension, there are a few steps.
 
   </el-carousel-item>
   ```
-##### Collapse
+##### [Collapse](https://element.eleme.io/#/en-US/component/collapse)
 - elcollapse
   ```html
   <el-collapse
@@ -791,9 +967,184 @@ For install this extension, there are a few steps.
 
   </el-collapse-item>
   ```
-
+##### [Timeline](https://element.eleme.io/#/en-US/component/timeline)
+- eltimeline
+  ```html
+  <el-timeline :reverse="false">
+    
+  </el-timeline>
+  ```
+- eltimelinefull
+  ```html
+  <el-timeline-item
+    timestamp="YYYY-MM-DD"
+    :hide-timestamp="false"
+    placement="bottom"
+    type="primary"
+    color=""
+    size="normal"
+    icon=""
+  >
+    
+  </el-timeline-item>
+  ```
+- eltimelineitem
+  ```html
+  <el-timeline-item
+    timestamp="YYYY-MM-DD"
+  >
+    
+  </el-timeline-item>
+  ```
+##### [Divider](https://element.eleme.io/#/en-US/component/divider)
+- eldivider
+  ```html
+  <el-divider></el-divider>
+  ```
+- eldividerfull
+  ```html
+  <el-divider
+    direction="horizontal"
+    content-position="center"
+  >
+    
+  </el-divider>
+  ```
+##### [Calendar](https://element.eleme.io/#/en-US/component/calendar)
+- elcalendar
+  ```html
+  <el-calendar v-model="" />
+  ```
+- elcalendarfull
+  ```html
+  v-model=""
+    :range="[]"
+    :first-day-of-week="1"
+  />
+  ```
+##### [Image](https://element.eleme.io/#/en-US/component/image)
+- elimage
+  ```html
+  <el-image
+    src=""
+    fit="contain"
+  >
+    
+  </el-image>
+  ````
+- elimagefull
+  ```html
+  <el-image
+    src=""
+    fit="contain"
+    alt="image"
+    referrer-policy=""
+    :lazy="false"
+    scroll-container=""
+    :preview-src-list="[]"
+    :z-index="2000"
+    @load=""
+    @error=""
+  >
+    
+  </el-image>
+  ```
+##### [Backtop](https://element.eleme.io/#/en-US/component/backtop)
+- elbacktop
+  ```html
+  <el-backtop target="">
+    
+  </el-backtop>
+  ```
+- elbacktopfull
+  ```html
+  <el-backtop
+    target=""
+    :visibility-height="200"
+    :right="40"
+    :bottom="40"
+    @click=""
+  >
+    
+  </el-backtop>
+  ```
+##### [Infinite Scroll](https://element.eleme.io/#/en-US/component/infinite-scroll)
+- elinfinite
+  ```html
+  <ul
+    class="infinite-list"
+    v-infinite-scroll=""
+    style="overflow:auto"
+  >
+    <li v-for="item in " class="infinite-list-item">
+      
+    </li>
+  </ul>
+  ```
+##### [Avatar](https://element.eleme.io/#/en-US/component/avatar)
+- elavatar
+  ```html
+  <el-avatar
+    shape="circle"
+    size="medium"
+    src=""
+  >
+    
+  </el-avatar>
+  ```
+- elavatarfull
+  ```html
+  <el-avatar
+    icon=""
+    size="medium"
+    shape="circle"
+    src=""
+    srcSet=""
+    alt=""
+    fit="cover"
+    @error="() => {}"
+  >
+    
+  </el-avatar>
+  ```
+##### [Drawer](https://element.eleme.io/#/en-US/component/drawer)
+- eldrawer
+  ```html
+  <el-drawer
+    title=""
+    :visible="false"
+    direction="rtl"
+  >
+    
+  </el-drawer>
+  ```
+- eldrawerfull
+  ```html
+  <el-drawer
+    :append-to-body="false"
+    :before-close=""
+    :close-on-press-escape=""
+    custom-class=""
+    :destroy-on-close="false"
+    :modal="true"
+    :modal-append-to-body="true"
+    direction="rtl"
+    :show-close="true"
+    size="30%"
+    title=""
+    :visible="false"
+    :wrapperClosable="true"
+    :withHeader="true"
+    @open="() => {}"
+    @opened="() => {}"
+    @close="() => {}"
+    @closed="() => {}"
+  >
+    
+  </el-drawer>
+  ```
 ### JavaScript
-- elnoti
+- [elnoti](https://element.eleme.io/#/en-US/component/notification)
   ```js
   this.$notify({
     title: 'Title',
@@ -802,7 +1153,7 @@ For install this extension, there are a few steps.
     duration: 2500,
   });
   ```
-- elmessage
+- [elmessage](https://element.eleme.io/#/en-US/component/message)
   ```js
   this.$message({
     type: '',
@@ -810,7 +1161,7 @@ For install this extension, there are a few steps.
     showClose: false,
   });
   ```
-- elloading
+- [elloading](https://element.eleme.io/#/en-US/component/loading)
   ```js
   this.$loading({
     lock: true,
@@ -819,14 +1170,14 @@ For install this extension, there are a few steps.
     background: 'rgba(0, 0, 0, 0.7)',
   });
   ```
-- elalert
+- [elalert](https://element.eleme.io/#/en-US/component/message-box)
   ```js
   this.$alert('This is a message', 'Title', {
     confirmButtonText: 'OK',
     callback: (action) => {},
   });
   ```
-- elconfirm
+- [elconfirm](https://element.eleme.io/#/en-US/component/message-box)
   ```js
   this.$confirm('Message', 'Title', {
     confirmButtonText: 'OK',
@@ -838,7 +1189,7 @@ For install this extension, there are a few steps.
 
   });
   ```
-- elmsgbox
+- [elmsgbox](https://element.eleme.io/#/en-US/component/message-box)
   ```js
   this.$msgbox({
     title: 'Title',
@@ -864,7 +1215,7 @@ For install this extension, there are a few steps.
     // Do something
   });
   ```
-- elprompt
+- [elprompt](https://element.eleme.io/#/en-US/component/message-box)
   ```js
   this.$prompt('Please input your e-mail', 'Tip', {
     confirmButtonText: 'OK',
